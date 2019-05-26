@@ -2,7 +2,7 @@
 
 This note presents how to configure pam_slurm_adopt to prevent a user access to a compute node
 of Heracles. The instructions below will only allow users in wheel to have access to compute nodes (2->17).
-
+We should not configure this for node18 because users need to ssh to this node to compile cuda codes. 
 
 ```
 [test1@heracles ~]$ ssh node17
@@ -83,7 +83,22 @@ session     required      pam_unix.so
 ```
 
 ## Auto scripts. 
+To facilitate this process, I have wrritten the scripts /root/setup_pam.sh
+```
+cp /etc/pam.d/sshd /etc/pam.d/sshd.bk  # backup original sshd
+cp /etc/pam.d/password-auth /etc/pam.d/password-auth.bk
+cp /etc/security/access.conf /etc/security/access.conf.bk
 
+cp sshd.pam /etc/pam.d/sshd # copy configured sshd for PAM
+cp password-auth.pam /etc/pam.d/password-auth # copy configured password-auth for PAM
+cp access.conf.pam /etc/security/access.conf
+```
+
+To run this script, it requires to have the pre-configured above three files and setup_pam.sh
+in /root/ of each node. Run following command to execute
+```
+sh setup_pam.sh 
+```
 
 
 <h2> References:  <h2> 
