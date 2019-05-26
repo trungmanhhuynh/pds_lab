@@ -102,3 +102,5 @@ sh setup_pam.sh
 
 
 <h2> References:  <h2> 
+ - https://slurm.schedmd.com/pam_slurm_adopt.html
+ - https://hpcworks.wordpress.com/2017/05/29/setup-slurm-pam-plugin-on-centos-7/  
