@@ -25,6 +25,8 @@ int main(){
 #SBATCH --nodes=1               ### Node count required for the job, default = 1
 #SBATCH --ntasks-per-node=1     ### Nuber of tasks to be launched per Node, default = 1
 #SBATCH --exclusive             ### no shared resources within a node
+#SBATCH --mail-type=ALL                   ### email alert at start, end and abortion of execution
+#SBATCH --mail-user=manh.huynh@ucdenver.edu ### send mail to this address
 
 
 ./hello
