@@ -1,3 +1,5 @@
+scancel -u username   # cancel all jobs of username
+
 slurmd -C print the node's current configuration
 
 sinfo
