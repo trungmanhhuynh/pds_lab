@@ -10,10 +10,12 @@
 #!/bin/bash
 #SBATCH -J mm-cuda2
 #SBATCH --partition=short-gpu
-#SBATCH --mem=20G                        # memory             
+#SBATCH --mem=10G                        # request max memory             
 #SBATCH --output=output.log              # ouput file
 #SBATCH --gres=gpu:P100_SXM:4            # max number of GPUs
-         
+#SBATCH --mail-type=ALL                   # email alert at start, end and abortion of execution
+#SBATCH --mail-user=manh.huynh@ucdenver.edu # send mail to this address
+
 ./mm-cuda2 1000 
 ```
 
