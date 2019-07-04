@@ -24,7 +24,7 @@ Finally, I using silent mode for each node. We meed to modify silent.cfg to the 
 ```
 ssh node18 /home/manhh/install/parallel_studio_xe_2019_update4_cluster_edition/install.sh --silent=/home/manhh/install/parallel_studio_xe_2019_update4_cluster_edition/silent.cfg
 ```
-Update PATH enviroment, I placed following command in /ect/profile.d/intel.sh 
+Update PATH enviroment, I placed following command in /etc/profile.d/intel.sh 
 ```
 source /opt/intel/bin/compilervars.sh -arch intel64 -platform linux
 ```
