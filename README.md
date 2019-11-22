@@ -6,3 +6,4 @@
 - [Submit_C_program_using_sbatch](https://github.com/trungmanhhuynh/pds_lab/blob/master/submit_C_program_using_sbatch.md)
 - [Submit_CUDA_program_using_sbatch](https://github.com/trungmanhhuynh/pds_lab/blob/master/submit_CUDA_program_using_sbatch.md)
 - [Useful command for SLURM](https://github.com/trungmanhhuynh/pds_lab/blob/master/Useful_command_for_SLURM.md)
+- [Troubleshooting Heracles](hhtps://github.com/trungmanhhuynh/pds_lab/blob/master/Troubleshooting.md)
