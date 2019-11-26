@@ -51,4 +51,15 @@ Cuda compilation tools, release 9.0, V9.0.176
 (pytorchenv) [manhh@node18 fpl-fixed]$ echo $LD_LIBRARY_PATH
 /opt/boost/lib/:/usr/local/cuda-9.0/lib64:/usr/local/torch/install/lib:/usr/local/mpi/intel/openmpi-1.10.4/lib64
 ```
+### Resovled
+In anaconda enviroment, check cudatoolkit version. I used cudatoolkit 10.0.0, which is inconsistent with cupy-cuda90. 
+Thus, we need to delete cudatoolkit 10.0.0. 
+```
+conda uninstall cudatoolkit 
+```
+Note that this will also delete pytorch and torchvision, which are dependent on cudatoolkit 10.0.0. 
+
+
+
+
 
