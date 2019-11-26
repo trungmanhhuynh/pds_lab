@@ -31,8 +31,11 @@ cupy.cuda.driver.CUDADriverError: CUDA_ERROR_INVALID_PTX: a PTX JIT compilation 
 
 ### Current system enviroment: 
 
-cupy-cuda90 version 6.5.0
-chaier version 6.5.0
+```
+cupy-cuda90 
+version 6.5.0
+chainer version 6.5.0
+```
 ```
 (pytorchenv) [manhh@node18 fpl-fixed]$ nvcc -V
 nvcc: NVIDIA (R) Cuda compiler driver
