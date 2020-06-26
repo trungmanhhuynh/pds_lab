@@ -36,3 +36,40 @@ We need to make sure it works or if we need unique lic files for each node.
 ## 3. Install new intel software for Xeon. 
 ---> will be installed
 
+## 4. Update Intel Licenes. 
+1. Check directory consists of licenses file: 
+```
+echo $INTEL_LICENSE_FILE 
+```
+Currently, I placed license file in /opt/intel/licenses/ 
+2. We need to remove the old license first. 
+```
+$ sudo rm /opt/intel/licenses/l_3LLJNJFW.lic
+$ icc --version
+
+Error: A license for Comp-CL could not be obtained.  (-1,359,2).
+
+Is your license file in the right location and readable?
+The location of your license file should be specified via
+the $INTEL_LICENSE_FILE environment variable.
+
+License file(s) used were (in this order):
+**  1.  /opt/intel/compilers_and_libraries_2019.4.243/linux/licenses
+**  2.  /opt/intel/licenses/*.lic
+**  3.  /home/manhh/intel/licenses/*.lic
+**  4.  /opt/intel/compilers_and_libraries_2019.4.243/linux/bin/intel64/../../Licenses
+**  5.  /home/manhh/Licenses
+**  6.  /Users/Shared/Library/Application Support/Intel/Licenses
+**  7.  /opt/intel/compilers_and_libraries_2019.4.243/linux/bin/intel64/*.lic
+```
+3. Place the new license file into /opt/intel/licenses/ 
+```
+sudo cp ~/COM_L___DVWR-3LLJNJFW.lic /opt/intel/licenses/
+```
+4. Make sure it works
+```
+$ icc -version
+icc (ICC) 19.0.4.243 20190416
+Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
+```
+
