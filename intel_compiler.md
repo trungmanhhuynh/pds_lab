@@ -73,3 +73,7 @@ icc (ICC) 19.0.4.243 20190416
 Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 ```
 
+** Note that we only need to install license file in master node, where we'll use the compiler "icc, icpc". We dont need to install on other nodes
+unless we want to compile code in these nodes.**
+
+
