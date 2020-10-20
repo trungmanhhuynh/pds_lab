@@ -19,6 +19,13 @@ To restart the slurmd deamon on the compute node
 master$ ssh node2
 node2$ sudo service slurmd restart
 ```
+If the service fails to restart, with error "PID file /var/run/slurmd/slurmd.pid not readable (yet?) after start" 
+Fix: 
+```
+$ ssh node2
+$ sudo cp /var/run/slurmd.pid /var/run/slurmd/
+$ sudo service slurmd restart 
+```
 
 
 scancel -u username   # cancel all jobs of username
