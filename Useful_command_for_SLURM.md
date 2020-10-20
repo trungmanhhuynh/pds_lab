@@ -1,3 +1,9 @@
+
+To re-start/check status slurm service on master node:
+```
+$ sudo service slurmctld restart/status
+```
+
 scancel -u username   # cancel all jobs of username
 
 slurmd -C print the node's current configuration
