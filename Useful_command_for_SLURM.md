@@ -3,6 +3,11 @@ To re-start/check status slurm service on master node:
 ```
 $ sudo service slurmctld restart/status
 ```
+To kill jobs that are PENDING/RUNNING/SUSPENDED
+```
+sudo scancel --state=PENDING/RUNNING/SUSPENDED
+```
+
 
 scancel -u username   # cancel all jobs of username
 
