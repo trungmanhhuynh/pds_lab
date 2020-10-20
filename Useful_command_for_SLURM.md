@@ -14,6 +14,13 @@ Not all states are valid given a node's prior state
 scontrol update nodename=node001 state=resume
 ```
 
+To restart the slurmd deamon on the compute node
+```
+master$ ssh node2
+node2$ sudo service slurmd restart
+```
+
+
 scancel -u username   # cancel all jobs of username
 
 slurmd -C print the node's current configuration
