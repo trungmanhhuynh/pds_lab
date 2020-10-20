@@ -7,7 +7,12 @@ To kill jobs that are PENDING/RUNNING/SUSPENDED
 ```
 sudo scancel --state=PENDING/RUNNING/SUSPENDED
 ```
-
+To set state for a node, 
+Valid states are: NoResp DRAIN FAIL FUTURE RESUME POWER_DOWN POWER_UP UNDRAIN
+Not all states are valid given a node's prior state
+```
+scontrol update nodename=node001 state=resume
+```
 
 scancel -u username   # cancel all jobs of username
 
