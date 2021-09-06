@@ -1,0 +1,19 @@
+
+Recently, I need to backup my large datasets to OneDrive to save some spaces for my current research. 
+OneDrive is currently offer 5GB. 
+
+To setup onedrive, I follow this tutorial: http://woshub.com/mount-google-drive-onedrive-linux/ 
+and this https://stnetwork.fr/2020/07/01/onedrive-client-centos-7 
+By default, the Onedrive folder is created 
+
+Once OneDrive is setup, I moved large datasets (e.g. Titan.rar) to this folder. If the file to too large,
+we need to split the files to smaller chunks: 
+```
+split -b 100G titan.tar "titan.tar.part_"
+```
+
+Deleve original tar file and then run:
+```
+onedrive --synchronize
+```
+to upload files to onedrive.
